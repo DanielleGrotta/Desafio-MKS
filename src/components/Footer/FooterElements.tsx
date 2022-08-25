@@ -7,7 +7,6 @@ export const FooterContainer = styled.footer`
     display: flex;
     justify-content: center;
     font-weight: 700;
-    position: absolute;
     bottom: 0;
 `;
 

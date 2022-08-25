@@ -10,6 +10,9 @@ import {
     CartImg,
     NavBtnCartCount,
     SidebarContainer,
+    SidebarWrap,
+    SidebarTitle,
+    ExitBtn,
     SidebarUl,
     SidebarLi,
     SidebarProductsCard
@@ -18,6 +21,10 @@ import {
 import card  from './card.svg';
 
 export const Navbar = () => {
+
+    const [sidebar, setSidebar] = useState(false);
+
+    const showSidebar = () => setSidebar(!sidebar);
 
     return (
         <>
@@ -29,16 +36,22 @@ export const Navbar = () => {
                     </NavWrapper>
                     
                     <NavBtn>
-                        <NavBtnCart >
+                        <NavBtnCart onClick={showSidebar} >
                             <CartImg src={card}></CartImg>
                             <NavBtnCartCount>0</NavBtnCartCount>
                         </NavBtnCart>
                     </NavBtn>
                 </NavbarContainer>
-                <SidebarContainer>
-                    <SidebarUl>
+                <SidebarContainer style={{width: sidebar ? '486px' : '0px' }}>
+                    <SidebarWrap>
+                        <SidebarTitle>Carrinho de compras</SidebarTitle>
+                        <ExitBtn style={{display: sidebar ? 'block' : 'none' }} onClick={showSidebar}>X</ExitBtn>
+                    </SidebarWrap>
+                    <SidebarUl style={{display: sidebar ? 'block' : 'none' }}>
                         <SidebarLi>
-                        <SidebarProductsCard />
+                        <SidebarProductsCard style={{display: sidebar ? 'block' : 'none' }}  >
+                        <ExitBtn >X</ExitBtn>
+                            </SidebarProductsCard>
                         </SidebarLi>
                     </SidebarUl>
                 </SidebarContainer>

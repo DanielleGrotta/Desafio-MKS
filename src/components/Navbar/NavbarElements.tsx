@@ -51,7 +51,6 @@ export const NavLogoText = styled.a`
 
 
 export const NavBtn = styled.button`
-    position: absolute;
     width: 90px;
     height: 45px;
     left: 1262px;
@@ -106,15 +105,62 @@ export const CartImg = styled.img`
 export const SidebarContainer = styled.aside`
     position: fixed;
     z-index: 999;
-    width: 100%;
+    width: 486px;
     height: 100%;
     background: #0F52BA;
     display: grid;
     align-items: center;
     top: 0;
-    left: 0;
+    right: 0;
     transition: 0.3s ease-in-out;
 `;
+
+export const SidebarWrap = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+`;
+
+export const SidebarTitle = styled.h1`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 27px;
+    line-height: 33px;
+    margin-left: 40px;
+    width: 180px;
+    height: 56px;
+`;
+
+
+export const ExitBtn = styled.button`
+    display: flex;
+    align-items: center;
+    width: 28px !important;
+    height: 28px;
+    background: #000;
+    font-size: 2rem;
+    cursor: pointer;
+    outline: none;
+    color: white;
+    border: none;
+    border-radius: 100%;
+    font-weight: 400;
+    position: absolute;
+    right: 1rem;
+    margin-top: -20px;
+    font-size: 15px;
+    padding: 5px 9px;
+    transition: 0.10s ease-in-out;
+`;
+
+
 
 export const SidebarUl = styled.ul`
     display: grid;
@@ -157,6 +203,11 @@ export const SidebarProductsCard = styled.div`
     text-decoration: none;
     color: #fff;
     padding: 0.5rem;
+    width: 379px;
+    height: 95px;
+    background: #fff;
+    border-radius: 8px;
+    margin-top: 5rem;
 
     &:hover {
         color: #000;
